@@ -4,9 +4,14 @@ public class TestDriver {
 
     public static void run() {
 
-        WriteToFile wf = new WriteToFile();
+       // WriteToFile wf = new WriteToFile();
 
-        wf.CreateTextFile();
+       // wf.CreateTextFile();
+
+        ReadFromFile rf = new ReadFromFile();
+
+        rf.ReadTextFile();
+
 
     }
 }

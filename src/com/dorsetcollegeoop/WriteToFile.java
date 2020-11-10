@@ -29,7 +29,14 @@ public class WriteToFile {
         }
 
     }
-    public static void AddRecords() {}
+    public static void AddRecords() {
+
+
+        for(int i = 0; i < 10; i++) {
+            output.format("This is line %d %n",i);
+        }
+
+    }
     public static void CloseFile() {
 
         if (output != null) {
