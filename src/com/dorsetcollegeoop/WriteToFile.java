@@ -7,6 +7,8 @@ public class WriteToFile {
 
     private static Formatter output;
 
+    private static String fileName = "superheroes.txt";
+
     public void CreateTextFile() {
         OpenFile();
         AddRecords();
@@ -14,10 +16,22 @@ public class WriteToFile {
 
     }
 
+    public void CreateTextFile(String _filename) {
+        fileName = _filename;
+        OpenFile();
+        // AddRecords();
+        AddCapitalCities();
+        CloseFile();
+
+    }
+
+
+
+
     public static void OpenFile() {
 
         try {
-            output = new Formatter("superheroes.txt");
+            output = new Formatter(fileName);
         }
         catch (SecurityException securityException) {
             System.out.println("Write permission denied");
@@ -37,6 +51,22 @@ public class WriteToFile {
         }
 
     }
+
+    public static void AddCapitalCities() {
+
+
+
+        output.format("Ireland %s %n","Dublin");
+        output.format("England %s %n","London");
+        output.format("France %s %n","Paris");
+
+
+    }
+
+
+
+
+
     public static void CloseFile() {
 
         if (output != null) {
